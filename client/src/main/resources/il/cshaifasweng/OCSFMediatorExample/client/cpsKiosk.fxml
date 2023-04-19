@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.CpsKiosk">
+   <children>
+      <AnchorPane layoutX="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane layoutX="232.0" layoutY="96.0" prefHeight="83.0" prefWidth="816.0">
+               <children>
+                  <Button fx:id="ReserveParkingBtn" layoutX="25.0" layoutY="15.0" mnemonicParsing="false" onAction="#ReserveParkingBtn" prefHeight="38.0" prefWidth="134.0" text="Reserve Parking" />
+                  <Button fx:id="CustomerBtn" layoutX="202.0" layoutY="15.0" mnemonicParsing="false" onAction="#CustomerBtn" prefHeight="38.0" prefWidth="150.0" text="OcasionalCustomer" />
+                  <Button fx:id="checkReservBtn" layoutX="387.0" layoutY="15.0" mnemonicParsing="false" onAction="#checkReservBtn" prefHeight="38.0" prefWidth="169.0" text="Check-Reservation" textFill="#130000" />
+                  <Button fx:id="createNewSubsBtn" layoutX="586.0" layoutY="15.0" mnemonicParsing="false" onAction="#createNewSubsBtn" prefHeight="38.0" prefWidth="216.0" text="Create New Subscription" />
+               </children>
+               <effect>
+                  <Blend mode="RED" />
+               </effect>
+            </AnchorPane>
+            <Text fill="#1ac48a" layoutX="491.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPS Kiosk">
+               <font>
+                  <Font size="72.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="816.0" layoutY="322.0" prefHeight="317.0" prefWidth="410.0">
+               <children>
+                  <PasswordField fx:id="SUBSNUM_LOGIN_TF" layoutX="207.0" layoutY="65.0" onAction="#SUBSNUM_LOGIN_TF" prefHeight="29.0" prefWidth="176.0" promptText="Subscription Number" />
+                  <TextField fx:id="LICENSE_LOGIN_TF" layoutX="208.0" layoutY="16.0" onKeyTyped="#LICENSE_LOGIN_TF" prefHeight="30.0" prefWidth="176.0" promptText="plate number" />
+                  <Button fx:id="RenewSubsBtn" layoutX="16.0" layoutY="151.0" mnemonicParsing="false" onAction="#RenewSubsBtn" prefHeight="37.0" prefWidth="154.0" text="Renew Subscription" />
+                  <Button fx:id="EnterParkingBTN" layoutX="252.0" layoutY="154.0" mnemonicParsing="false" onAction="#EnterParkingBTN" prefHeight="30.0" prefWidth="139.0" text="Enter Parking" />
+                  <ImageView fitHeight="35.0" fitWidth="68.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/images/71GXWTdc+4L.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="65.0" layoutX="16.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/images/lock-icon-isolated-black-background-simple-vector-logo-163369340.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="ExitParkingBTN" layoutX="254.0" layoutY="214.0" mnemonicParsing="false" onAction="#ExitParkingBTN" prefHeight="29.0" prefWidth="139.0" text="Exit Parking" />
+                  <Button fx:id="complaintBTN" layoutX="17.0" layoutY="214.0" mnemonicParsing="false" onAction="#complaintBTNa" prefHeight="29.0" prefWidth="152.0" style="-fx-border-color: #4ee44e;" text="Complaint Submit" />
+                  <Label layoutX="92.0" layoutY="59.0" prefHeight="39.0" prefWidth="86.0" text="Password: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="20.0" prefHeight="35.0" prefWidth="68.0" text="ID: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ClientErrorLabel" layoutX="21.0" layoutY="264.0" prefHeight="38.0" prefWidth="372.0" textFill="#1e00ff" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="80.0" layoutY="322.0" prefHeight="285.0" prefWidth="410.0">
+               <children>
+      
+                  <PasswordField fx:id="PW_LOGIN_TF" layoutX="153.0" layoutY="76.0" onAction="#PW_LOGIN_TF" prefHeight="38.0" prefWidth="234.0" promptText="password" />
+                  <TextField fx:id="ID_LOGIN_TF" layoutX="153.0" layoutY="22.0" onAction="#ID_LOGIN_TF" prefHeight="38.0" prefWidth="234.0" promptText="login id" />
+                  <Button fx:id="WorkerBtn" layoutX="226.0" layoutY="222.0" mnemonicParsing="false" onAction="#WorkerBtn" prefHeight="38.0" prefWidth="101.0" text="Worker" />
+<!--                  <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="157.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">-->
+<!--&lt;!&ndash;                     <image>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <Image url="@../../../../../../../../../tie-icon-necktie-and-neckcloth-symbol-flat-vector-6577370.jpg" />&ndash;&gt;-->
+<!--&lt;!&ndash;                     </image>&ndash;&gt;-->
+<!--                  </ImageView>-->
+                  <Button fx:id="ManagerBtn" layoutX="221.0" layoutY="160.0" mnemonicParsing="false" onAction="#ManagerBtn" prefHeight="38.0" prefWidth="107.0" text="Manager" />
+                  <ImageView fitHeight="38.0" fitWidth="68.0" layoutX="328.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/images/tie-anonymous-anonymous-anonymous-wallpaper-thumb.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="68.0" layoutX="328.0" layoutY="222.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/images/tie-icon-necktie-and-neckcloth-symbol-flat-vector-6577370.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/images/id-card-icon-on-black-background-black-flat-style-vector-25959761.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="58.0" layoutY="23.0" prefHeight="35.0" prefWidth="68.0" text="ID: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="58.0" layoutY="75.0" prefHeight="39.0" prefWidth="86.0" text="Password: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="14.0" layoutY="69.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/images/lock-icon-isolated-black-background-simple-vector-logo-163369340.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="895.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Login">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#e52540" layoutX="122.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee login">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Button fx:id="backbtn" layoutX="50.0" layoutY="618.0" mnemonicParsing="false" onAction="#backbtn" prefHeight="48.0" prefWidth="100.0" text="BACK">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <ImageView fitHeight="95.0" fitWidth="184.0" layoutX="562.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/images/depositphotos_410809358-stock-video-glowing-neon-line-remove-shopping.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.03333333507180214" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</Pane>
